@@ -7,7 +7,7 @@ help:
 	@echo "package - generates zip file"
 	@echo "gen - generates response models"
 
-ZIP_FILE = pythonlambdatemplate.zip
+ZIP_FILE = oauth_reminder.zip
 WHEEL_FILE = realpath ./dist/*.whl
 
 .PHONY: clean
