@@ -1,11 +1,11 @@
 resource "aws_cloudwatch_event_rule" "evnet_rule" {
   name                = local.project_name
-  schedule_expression = "cron(0/5 13-23 ? * MON-FRI *)"
+  schedule_expression = "cron(20 0 * * ? *)"
 }
 
 
 resource "aws_cloudwatch_event_target" "event_target" {
-  rule      = aws_cloudwatch_event_rule.evnet_rule.arn
+  rule      = aws_cloudwatch_event_rule.evnet_rule.name
   target_id = local.project_name
 
   input = <<DOC

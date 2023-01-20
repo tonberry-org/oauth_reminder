@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "tonberry-terraform-backend"
-    key            = "${local.project_name}.tfstate"
+    key            = "oauth_reminder.tfstate"
     region         = "us-west-2"
     dynamodb_table = "terraform-state-lock"
   }

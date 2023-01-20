@@ -8,13 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.9"
 boto3 = "^1.26.41"
-pandas = "^1.5.2"
-numpy = "^1.24.1"
 requests = "^2.28.1"
 pydantic = "^1.10.4"
 tda_tonberry_trader = { git = "git@github.com:tonberry-org/tda_tonberry_trader.git", branch = "main" }
 slack_bot_client = { git = "git@github.com:tonberry-org/slack_bot_client.git", branch = "main" }
 slack-sdk = "^3.19.5"
+common = { git = "git@github.com:tonberry-org/common.git", branch = "main" }
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"

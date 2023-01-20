@@ -30,7 +30,8 @@ data "aws_iam_policy_document" "ssm_secrets" {
   statement {
     actions = ["ssm:GetParameter"]
     resources = [
-      "arn:aws:ssm:us-west-2:536213556125:parameter/eod/api_key",
+      "arn:aws:ssm:us-west-2:536213556125:parameter/tda/client_id",
+      "arn:aws:ssm:us-west-2:536213556125:parameter/tda/redirect_uri",
       "arn:aws:ssm:us-west-2:536213556125:parameter/slack/*"
     ]
   }

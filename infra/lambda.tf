@@ -10,8 +10,6 @@ resource "aws_lambda_function" "lambda" {
 
   environment {
     variables = {
-      CODE : data.aws_ssm_parameter.code.value
-      CLIENT_ID : data.aws_ssm_parameter.client_id.value
       # For the instrumentation handler to invoke your real handler, we need this value
       NEW_RELIC_LAMBDA_HANDLER = "${local.project_name}.lambda_function.lambda_handler"
       NEW_RELIC_ACCOUNT_ID     = data.aws_ssm_parameter.newrelic_account_id.value
